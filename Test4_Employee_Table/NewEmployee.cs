@@ -13,34 +13,11 @@ namespace Test4_Employee_Table
     internal class NewEmployee : EmployeeProperties
 
     {
-        ////string connetionString = "";
-        ////SqlCommand cmd;
-        ////SqlConnection SqlCon;
-        ////string query = "";
-        ////public void Employee()
-        ////{
-        ////     Console.WriteLine("Enter EmployeeID where to Update ");
-        ////    int empId = int.Parse(Console.ReadLine());
-        ////    Console.WriteLine("Enter Updated Employee Name");
-        ////    string empName = Console.ReadLine();
-
-
-        ////    SqlConnection connectionstring = new SqlConnection("Server=LAPTOP-0ELAKBQI\\SQLEXPRESS;Database=Mounika;Trusted_Connection=true;");
-        ////    //SqlCommand cmd = new SqlCommand(query,  SqlCon);
-        ////    SqlCon = new SqlConnection(connetionString);
-        ////    connectionstring.Open();
-        ////    query = "update Employee set EmpName='" + EmpName + "' where EmpID=" + empId + "";
-        ////    cmd = new SqlCommand(query, connectionstring);
-        ////    cmd.ExecuteNonQuery();
-        ////    cmd.Clone();
-        ////    //if (objDone == 1)
-        ////    //{
-        ////    //    Console.WriteLine("Updated Record");
-        ////    //}
+      
         string? connection;
         SqlConnection? con;
         string? query;
-        public void Employee()
+        public void UpadteEmployee()
         {
             Console.WriteLine("Enter EmployeeID where to Update ");
             int empId = int.Parse(Console.ReadLine());

@@ -19,15 +19,15 @@ namespace Test4_Employee_Table
             var employeeLists = employeeListobj.Method();
         SqlConnection connectionstring = new SqlConnection("Server=LAPTOP-0ELAKBQI\\SQLEXPRESS;Database=Mounika;Trusted_Connection=true;");
         string query = "Insert Into Employe (EmpName, EmpAge,EmpGender,DeptID) " +
-                               "VALUES (@N, @A,@GN,@ID) ";
+                               "VALUES (@Name, @Age,@Gender,@ID) ";
         foreach (var emp in employeeLists)
         {
                
             // add parameters and their values
             cmd = new SqlCommand(query, connectionstring);
-            cmd.Parameters.Add("@N", System.Data.SqlDbType.NVarChar, 100).Value = emp.EmpName;
-                cmd.Parameters.Add("@A",System.Data.SqlDbType.NVarChar, 100).Value = emp.EmpAge;
-            cmd.Parameters.Add("@GN", System.Data.SqlDbType.NVarChar, 100).Value = emp.EmpGender;
+            cmd.Parameters.Add("@Name", System.Data.SqlDbType.NVarChar, 100).Value = emp.EmpName;
+                cmd.Parameters.Add("@Age",System.Data.SqlDbType.NVarChar, 100).Value = emp.EmpAge;
+            cmd.Parameters.Add("@Gender", System.Data.SqlDbType.NVarChar, 100).Value = emp.EmpGender;
                 cmd.Parameters.Add("@ID", System.Data.SqlDbType.NVarChar, 100).Value = emp.DeptID;
 
                 connectionstring.Open(); 
